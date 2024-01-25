@@ -1,6 +1,11 @@
 # toplex
 
-Build Steps:
-1- mkdir build && cd build
-2- cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-3- make -j
+## Build Steps:
+
+Build project using cmake, required version > 3.2
+
+```bash
+  mkdir build && cd build
+  cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  make -j
+```
