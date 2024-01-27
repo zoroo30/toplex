@@ -2,13 +2,6 @@
 
 ## Build Steps:
 
-clone google_test in a folder named lib
-
-```bash
-  mkdir build
-  git clone https://github.com/google/googletest/
-```
-
 a folder named build should be created all following commands must be while in build
 
 ```bash
