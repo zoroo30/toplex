@@ -19,7 +19,7 @@
 
 //--------------------------------------------------------------------------------------------------
 namespace toplex {
-    InputManager::InputManager(std::string& filePath)
+    InputManager::InputManager(const std::string& filePath)
     {
         std::ifstream file(filePath);
         if(!file.good()) 
@@ -50,22 +50,22 @@ namespace toplex {
             }
         }
     }
-    //--------------------------------------------------------------------------------------------------
+    
     bool InputManager::splitRegularDefinition(std::string& line)
     {
         return false;
     }
-    //--------------------------------------------------------------------------------------------------
+    
     bool InputManager::splitRegularExpression(std::string& line)
     {
         return false;
     }
-    //--------------------------------------------------------------------------------------------------
+    
     bool InputManager::splitKeywords(std::string& line)
     {
         return false;
     }
-    //--------------------------------------------------------------------------------------------------
+    
     bool InputManager::splitPunctuations(std::string& line)
     {
         return false;

@@ -16,6 +16,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <unordered_map>
 //--------------------------------------------------------------------------------------------------
 //  Forward Declarations
 //--------------------------------------------------------------------------------------------------
@@ -38,7 +39,7 @@ namespace toplex
          * 
          * @param filePath
          */
-        InputManager(std::string& filePath);
+        InputManager(const std::string& filePath);
         /**
          * @brief Destroy the InputManager object
          * 
