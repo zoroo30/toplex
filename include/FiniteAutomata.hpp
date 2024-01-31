@@ -1,39 +1,41 @@
 #pragma once
-
+#include <climits>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
-#include <variant>
-
-struct State {
-    std::string id;
-};
-
-
+#include "State.hpp"
 
 class FiniteAutomata {
 protected:
     State initialState;
-    std::unordered_set<State> finalStates;
+    State finalState;
     std::vector<State> states;  
-    std::vector<char> alphapets;
-    std::unordered_map<State, std::unordered_map<char, std::variant<std::vector<State>, State> >> transitionTable;
+
 public:
     virtual ~FiniteAutomata() = default;
+    FiniteAutomata(State initial, State final, std::vector<State> states) :
+                                            initialState(initial),
+                                            finalState(final),
+                                            states(states) {}
+
+    State getNextNode(State currentNode, char input);
+    bool isAccepted(std::string str);
 };
 
-class NFA : public FiniteAutomata {
+// class NFA : public FiniteAutomata<std::vector<State>> {
 
-};
+// };
 
-class DFA : public FiniteAutomata {
+// class DFA : public FiniteAutomata<State> {
 
-};
+// };
 
 
-class RegularOperations {
-    NFA unionOp(NFA& a, NFA& b);
-    NFA concatOp(NFA& a, NFA& b);
-    NFA closureOp(NFA& a);
-};
+// class RegularOperations {
+//     NFA unionOp(FiniteAutomata& a, FiniteAutomata& b);
+
+//     | & + *
+
+// };

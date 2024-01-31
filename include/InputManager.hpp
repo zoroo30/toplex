@@ -48,7 +48,7 @@ namespace toplex
 
     private:
         std::unordered_map<std::string, std::string> defintions;
-        std::vector< std::pair<std::string, std::string> > parsedInput;
+        std::vector<std::pair<std::string, std::string>> parsedInput;
 
         bool splitRegularDefinition(std::string& line);
         bool splitRegularExpression(std::string& line);
